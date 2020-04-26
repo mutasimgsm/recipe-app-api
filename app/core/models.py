@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, \
-PermissionsMixin
+                                        PermissionsMixin
 
 
 class UserManager(BaseUserManager):
@@ -21,8 +21,7 @@ class UserManager(BaseUserManager):
         user.is_staff = True
         user.is_superuser = True
         user.save(using=self._db)
-
-        return user 
+        return user
 
 
 class User(AbstractBaseUser, PermissionsMixin):
